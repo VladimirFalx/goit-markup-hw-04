@@ -31,7 +31,7 @@ body {
 .container {
   width: 1200px;
   padding: 0 15px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 /*----------HEADER----------*/
@@ -55,6 +55,7 @@ body {
 }
 
 .logo {
+  margin-right: 93px;
   font-family: "raleway";
   font-style: normal;
   font-weight: 700;
@@ -62,7 +63,6 @@ body {
   line-height: calc(31 / 26);
   letter-spacing: 0.03em;
   color: var(--accent-color);
-  margin-right: 93px;
 }
 
 .main-logo span {
@@ -75,41 +75,48 @@ body {
   padding: 0;
 }
 
-.pages li:last-child {
-  margin: 0;
+.pages :not(:last-child) {
+  margin-right: 50px;
 }
-
-.page {
+.page-link {
+  display: block;
   font-weight: 500;
   font-size: var(--main-font);
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   color: var(--main-color);
-  margin-right: 50px;
 }
 
-.page:hover,
-.page:focus {
+.page-link:hover,
+.page-link:focus {
   color: var(--accent-color);
 }
 
 .header-contacts {
-  display: inline-flex;
+  display: flex;
   margin: 0;
   padding: 0;
 }
 
+.header-contacts :not(:last-child) {
+  margin-right: 30px;
+}
+.contact-icon {
+  display: block;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
 .header-contact {
+  display: flex;
+  align-items: center;
   font-style: normal;
   font-size: var(--main-font);
   font-weight: 500;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
+  text-align: center;
   color: var(--text-color);
-}
-
-.header-contacts li:first-child {
-  margin-right: 50px;
 }
 
 .header-contact:hover,
@@ -120,9 +127,8 @@ body {
 /*----------FOOTER----------*/
 
 .footer {
-  /*цвет сделал, чтоб видеть шрифт элемента*/
-  background-color: var(--background-color);
   padding: 60px 0;
+  background-color: var(--background-color);
 }
 
 .footer-contacts {
@@ -140,23 +146,23 @@ body {
 }
 
 .footer-contact {
+  display: block;
+  width: 231px;
   font-style: normal;
   font-size: var(--main-font);
   font-weight: 400;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
-  width: 231px;
-  display: block;
 }
 
 .address {
+  display: block;
   font-style: normal;
   font-weight: 400;
   font-size: var(--main-font);
   line-height: calc(24 / 14);
   color: var(--white-color);
-  display: block;
 }
 
 .footer-contact:hover,
@@ -177,14 +183,21 @@ body {
 /*----------HERO----------*/
 
 .hero {
-  /*цвет сделал, чтоб видеть шрифт элемента*/
-  background-color: var(--background-color);
   margin: 0 0;
-  text-align: center;
   padding: 200px 0;
+  background-color: var(--background-color);
+  background-image: url(../images/hero-bg.jpg),
+    linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1600px cover;
+  text-align: center;
 }
 
 .slogan {
+  max-width: 696px;
+  margin: 0 auto 30px;
+  padding: 0;
   font-weight: 900;
   font-size: 44px;
   line-height: calc(60 / 44);
@@ -192,12 +205,11 @@ body {
   text-transform: uppercase;
   color: var(--white-color);
   text-align: center;
-  width: 696px;
-  margin: 0 auto 30px;
-  padding: 0;
 }
 
 .to-book {
+  padding: 10px 32px;
+  margin: 0 auto;
   font-weight: 700;
   font-size: 16px;
   line-height: calc(30 / 16);
@@ -205,9 +217,7 @@ body {
   letter-spacing: 0.06em;
   color: var(--white-color);
   background: var(--accent-color);
-  padding: 10px 32px;
   border-radius: 4px;
-  margin: 0 auto;
 }
 
 .to-book:hover,
@@ -228,27 +238,41 @@ body {
   justify-content: space-between;
 }
 
-.item {
+.benefits-item {
   width: 270px;
 }
 
+.benefits-card {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--team-background);
+  border-radius: 4px;
+}
+
+.benefits-icon {
+  display: block;
+  margin: auto;
+}
+
 .benefit {
+  margin: 0 0 10px;
+  padding: 0;
   font-size: var(--main-font);
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--main-color);
-  margin: 0 0 10px;
-  padding: 0;
 }
 
 .description {
+  margin: 0;
+  padding: 0;
   font-size: var(--main-font);
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
   color: var(--text-color);
-  margin: 0;
-  padding: 0;
 }
 
 /*----------SKILLS----------*/
@@ -259,13 +283,13 @@ body {
 }
 
 .skills-header {
+  margin: 0 0 50px;
+  padding: 0 0;
   font-size: 36px;
   line-height: calc(42 / 36);
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-color);
-  margin: 0 0 50px;
-  padding: 0 0;
 }
 
 .skills-list {
@@ -286,13 +310,13 @@ body {
 }
 
 .team-header {
+  margin: 0 0 50px;
+  padding: 0 0;
   font-size: 36px;
   line-height: calc(42 / 36);
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-color);
-  margin: 0 0 50px;
-  padding: 0 0;
 }
 
 .cards {
@@ -303,43 +327,43 @@ body {
 }
 
 .card {
+  margin: 0 0;
+  padding: 0 0;
   width: 270px;
   background-color: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  margin: 0 0;
-  padding: 0 0;
 }
 
 .team-img {
   display: block;
 }
 
-.member {
+.team-mate {
   padding: 30px 0;
   text-align: center;
 }
 
 .name {
+  margin: 0 0 10px;
+  padding: 0 0;
   font-weight: 500;
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-color);
-  margin: 0 0 10px;
-  padding: 0 0;
 }
 
 .role {
+  margin: 0 0;
+  padding: 0 0;
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-color);
-  margin: 0 0;
-  padding: 0 0;
 }
 
 /*--------------------PORTFOLIO-PAGE--------------------*/
@@ -362,6 +386,8 @@ body {
 }
 
 .button {
+  padding: 6px 22px;
+  margin-bottom: 50px;
   font-weight: 500;
   font-size: 16px;
   line-height: calc(26 / 16);
@@ -369,9 +395,7 @@ body {
   letter-spacing: 0.03em;
   color: var(--main-color);
   background: #f5f4fa;
-  padding: 6px 22px;
   border-radius: 4px;
-  margin-bottom: 50px;
 }
 
 .button:hover,
@@ -394,13 +418,13 @@ body {
 }
 
 .work {
-  background-color: var(--white-color);
-  border: 1px solid #eeeeee;
   width: 370px;
   padding: 0 0;
   margin-left: 28px;
   margin-top: 28px;
   flex-basis: calc((100% - 90px) / 3);
+  background-color: var(--white-color);
+  border: 1px solid #eeeeee;
 }
 
 .work-img {
@@ -413,18 +437,18 @@ body {
 }
 
 .work-title {
+  margin: 0 0 4px;
+  padding: 0 0;
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
   color: var(--main-color);
-  margin: 0 0 4px;
-  padding: 0 0;
 }
 
 .work-type {
+  margin: 0 0;
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.03em;
   color: var(--text-color);
-  margin: 0 0;
 }

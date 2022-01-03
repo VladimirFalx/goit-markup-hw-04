@@ -26,20 +26,30 @@
       <nav class="navigation">
         <a class="logo main-logo" href="./index.html">Web<span>Studio</span></a>
         <ul class="pages">
-          <li><a class="page" href="./index.html">Студия</a></li>
-          <li><a class="page" href="./portfolio.html">Портфолио</a></li>
-          <li><a class="page" href="">Контакты</a></li>
+          <li class="page">
+            <a class="page-link" href="./index.html">Студия</a>
+          </li>
+          <li class="page">
+            <a class="page-link" href="./portfolio.html">Портфолио</a>
+          </li>
+          <li class="page"><a class="page-link" href="">Контакты</a></li>
         </ul>
       </nav>
       <ul class="header-contacts">
-        <li>
-          <a class="header-contact" href="mailto:info@devstudio.com"
-            >info@devstudio.com</a
+        <li class="header-contacts-item">
+          <a class="header-contact" href="mailto:info@devstudio.com">
+            <svg class="contact-icon" width="16" height="12">
+              <use href="./images/symbol-defs.svg#mail"></use>
+            </svg>
+            info@devstudio.com</a
           >
         </li>
-        <li>
-          <a class="header-contact" href="tel:+380961111111"
-            >+38 096 111 11 11</a
+        <li class="header-contacts-item">
+          <a class="header-contact" href="tel:+380961111111">
+            <svg class="contact-icon" width="10" height="16">
+              <use href="./images/symbol-defs.svg#phone"></use>
+            </svg>
+            +38 096 111 11 11</a
           >
         </li>
       </ul>
@@ -56,28 +66,48 @@
       <div class="container">
         <h2 class="visually-hidden">Преимущества</h2>
         <ul class="benefits-list">
-          <li class="item">
+          <li class="benefits-item">
+            <div class="benefits-card">
+              <svg class="benefits-icon" width="65.32" height="70">
+                <use href="./images/symbol-defs.svg#antenna"></use>
+              </svg>
+            </div>
             <h3 class="benefit">Внимание к деталям</h3>
             <p class="description">
               Идейные соображения, а также начало повседневной работы по
               формированию позиции.
             </p>
           </li>
-          <li class="item">
+          <li class="benefits-item">
+            <div class="benefits-card">
+              <svg class="benefits-icon" width="66.96" height="70">
+                <use href="./images/symbol-defs.svg#clock"></use>
+              </svg>
+            </div>
             <h3 class="benefit">Пунктуальность</h3>
             <p class="description">
               Задача организации, в особенности же рамки и место обучения кадров
               влечет за собой.
             </p>
           </li>
-          <li class="item">
+          <li class="benefits-item">
+            <div class="benefits-card">
+              <svg class="benefits-icon" width="65.32" height="70">
+                <use href="./images/symbol-defs.svg#laptop"></use>
+              </svg>
+            </div>
             <h3 class="benefit">Планирование</h3>
             <p class="description">
               Равным образом консультация с широким активом в значительной
               степени обуславливает.
             </p>
           </li>
-          <li class="item">
+          <li class="benefits-item">
+            <div class="benefits-card">
+              <svg class="benefits-icon" width="65.32" height="70">
+                <use href="./images/symbol-defs.svg#astronaut"></use>
+              </svg>
+            </div>
             <h3 class="benefit">Современные технологии</h3>
             <p class="description">
               Значимость этих проблем настолько очевидна, что реализация
@@ -126,53 +156,61 @@
         <h2 class="team-header">Наша команда</h2>
         <ul class="cards">
           <li class="card">
-            <img
-              class="team-img"
-              src="./images/ihor.jpg"
-              alt="Игорь Демьяненко"
-              width="270"
-              height="260"
-            />
-            <div class="member">
+            <div>
+              <img
+                class="team-img"
+                src="./images/ihor.jpg"
+                alt="Игорь Демьяненко"
+                width="270"
+                height="260"
+              />
+            </div>
+            <div class="team-mate">
               <h3 class="name">Игорь Демьяненко</h3>
               <p class="role" lang="en">Product Designer</p>
             </div>
           </li>
           <li class="card">
-            <img
-              class="team-img"
-              src="./images/olha.jpg"
-              alt="Ольга Репина"
-              width="270"
-              height="260"
-            />
-            <div class="member">
+            <div>
+              <img
+                class="team-img"
+                src="./images/olha.jpg"
+                alt="Ольга Репина"
+                width="270"
+                height="260"
+              />
+            </div>
+            <div class="team-mate">
               <h3 class="name">Ольга Репина</h3>
               <p class="role" lang="en">Frontend Developer</p>
             </div>
           </li>
           <li class="card">
-            <img
-              class="team-img"
-              src="./images/nikolay.jpg"
-              alt="Николай Тарасов"
-              width="270"
-              height="260"
-            />
-            <div class="member">
+            <div>
+              <img
+                class="team-img"
+                src="./images/nikolay.jpg"
+                alt="Николай Тарасов"
+                width="270"
+                height="260"
+              />
+            </div>
+            <div class="team-mate">
               <h3 class="name">Николай Тарасов</h3>
               <p class="role" lang="en">Marketing</p>
             </div>
           </li>
           <li class="card">
-            <img
-              class="team-img"
-              src="./images/mihail.jpg"
-              alt="Михаил Ермаков"
-              width="270"
-              height="260"
-            />
-            <div class="member">
+            <div>
+              <img
+                class="team-img"
+                src="./images/mihail.jpg"
+                alt="Михаил Ермаков"
+                width="270"
+                height="260"
+              />
+            </div>
+            <div class="team-mate">
               <h3 class="name">Михаил Ермаков</h3>
               <p class="role" lang="en">UI Designer</p>
             </div>
@@ -183,7 +221,7 @@
   </main>
   <footer class="footer">
     <div class="container">
-      <a href="./index.html" class="logo down-logo">Web<span>Studio</span></a>
+      <a class="logo down-logo" href="./index.html">Web<span>Studio</span></a>
       <address>
         <ul class="footer-contacts">
           <li>
@@ -196,12 +234,12 @@
             </a>
           </li>
           <li class="footer-contact">
-            <a href="mailto:info@devstudio.com" class="footer-contact"
+            <a class="footer-contact" href="mailto:info@devstudio.com"
               >info@devstudio.com</a
             >
           </li>
           <li class="footer-contact">
-            <a href="tel:+380961111111" class="footer-contact"
+            <a class="footer-contact" href="tel:+380961111111"
               >+38 096 111 11 11</a
             >
           </li>
