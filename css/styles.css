@@ -5,11 +5,12 @@
   --text-color: #757575;
   --background-color: #2f303a;
   --team-background: #f5f4fa;
+  --icons-fill: #afb1b8;
   --main-font: 14px;
 }
 
 body {
-  font-family: "roboto", sans-serif;
+  font-family: 'roboto', sans-serif;
 }
 
 .visually-hidden {
@@ -56,7 +57,7 @@ body {
 
 .logo {
   margin-right: 93px;
-  font-family: "raleway";
+  font-family: 'raleway';
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
@@ -102,7 +103,8 @@ body {
   margin-right: 30px;
 }
 .contact-icon {
-  display: block;
+  max-width: 16px;
+  max-height: 16px;
   margin-right: 10px;
   fill: currentColor;
 }
@@ -129,6 +131,10 @@ body {
 .footer {
   padding: 60px 0;
   background-color: var(--background-color);
+}
+
+.footer-container {
+  display: flex;
 }
 
 .footer-contacts {
@@ -172,12 +178,52 @@ body {
   color: var(--accent-color);
 }
 
-.footer-contact {
+.footer-contacts :not(:last-child) {
   margin-bottom: 9px;
 }
 
-.footer-contacts li:last-child {
-  margin-bottom: 0;
+.footer-contact {
+  display: block;
+}
+
+.footer-social-links {
+  margin-top: 12px;
+  margin-left: 70px;
+}
+.footer-header {
+  margin: 0 0 20px;
+  padding: 0;
+  font-size: var(--main-font);
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links :not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white-color);
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  background-color: var(--accent-color);
+  color: var(--white-color);
 }
 
 /*----------HERO----------*/
@@ -190,7 +236,7 @@ body {
     linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1600px cover;
+  background-size: 1600px;
   text-align: center;
 }
 
@@ -252,7 +298,8 @@ body {
 }
 
 .benefits-icon {
-  display: block;
+  max-width: 70px;
+  max-height: 70px;
   margin: auto;
 }
 
@@ -357,13 +404,83 @@ body {
 }
 
 .role {
-  margin: 0 0;
+  margin: 0 0 16px;
   padding: 0 0;
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-color);
+}
+
+.team-links {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.team-links :not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--icons-fill);
+}
+
+.team-link:hover,
+.team-link:focus {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
+
+.social-link {
+  margin: auto;
+  fill: currentColor;
+}
+
+/*----------CLIENTS----------*/
+
+.clients {
+}
+
+.clients-header {
+  margin: 0 0 50px;
+  padding: 0 0;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-color);
+}
+
+.clients-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.clients-link {
+  display: block;
+  padding: 16px 32px;
+  border: 1px solid var(--icons-fill);
+  border-radius: 4px;
+  color: var(--icons-fill);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.clients-icon {
+  fill: currentColor;
 }
 
 /*--------------------PORTFOLIO-PAGE--------------------*/
@@ -402,6 +519,8 @@ body {
 .button:focus {
   background: var(--accent-color);
   color: var(--white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /*----------WORKS----------*/
@@ -425,6 +544,11 @@ body {
   flex-basis: calc((100% - 90px) / 3);
   background-color: var(--white-color);
   border: 1px solid #eeeeee;
+}
+
+.work:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .work-img {
